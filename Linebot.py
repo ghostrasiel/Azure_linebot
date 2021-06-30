@@ -13,7 +13,7 @@ channelSecret = "5734e0bf3fbca2b8ab26972585c039a7"
 line_bot_api = LineBotApi(channelAccessToken)
 handler = WebhookHandler(channelSecret)
 
-@app.route("/", methods=['POST'])
+@app.route("/callback", methods=['POST'])
 def callback():
     # get X-Line-Signature header value
     signature = request.headers['X-Line-Signature']
@@ -36,11 +36,12 @@ def callback():
 def handle_message(event):
     # data = selectdb.Mongo_select(int(event))
     # ans = receipt.receipt_mechine(['46658489'] , data)
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=event.message.text))
+    if event.source.user_id != "Udeadbeefdeadbeefdeadbeefdeadbeef":
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=event.message.text))
 
-    print(event.message.text) # 接收用戶訊息
+        print(event.message.text) # 接收用戶訊息
 
 if __name__ == "__main__":
     app.run()
