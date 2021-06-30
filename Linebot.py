@@ -2,6 +2,7 @@ from flask import Flask, request, abort
 from model import selectdb , receipt
 from linebot import LineBotApi, WebhookHandler
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
+from linebot.exceptions import InvalidSignatureError
 import json
 
 app = Flask(__name__)
