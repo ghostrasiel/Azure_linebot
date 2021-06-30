@@ -42,7 +42,7 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text=event.message.text))
 
-        print(event.message.text) # 接收用戶訊息
+        # print(event.message.text) # 接收用戶訊息
 
 if __name__ == "__main__":
     app.run()
