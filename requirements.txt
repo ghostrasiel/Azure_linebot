@@ -1,0 +1,10 @@
+Flask
+gunicorn
+line-bot-sdk
+requests
+psycopg2
+numpy
+Pillow
+azure-ai-formrecognizer
+sshtunnel
+pymongo
