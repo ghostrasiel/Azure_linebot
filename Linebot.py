@@ -14,6 +14,10 @@ channelSecret = "5734e0bf3fbca2b8ab26972585c039a7"
 line_bot_api = LineBotApi(channelAccessToken)
 handler = WebhookHandler(channelSecret)
 
+@app.route('/')
+def index():
+    return 'hellos man'
+
 @app.route("/callback", methods=['POST'])
 def callback():
     # get X-Line-Signature header value
