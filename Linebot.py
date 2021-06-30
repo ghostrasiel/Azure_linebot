@@ -39,14 +39,18 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    # data = selectdb.Mongo_select(int(event))
-    # ans = receipt.receipt_mechine(['46658489'] , data)
+    print(event.message.text)
+    data = selectdb.Mongo_select(int(event.message.text))
+    print(data)
+    ans = receipt.receipt_mechine(['46658489'] , data)
+    print(ans[0][0])
     if event.source.user_id != "Udeadbeefdeadbeefdeadbeefdeadbeef":
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text=event.message.text))
+            TextSendMessage(text='你的發票'+ans[0][0]+ans[0][1]+ans[0][2]))
+        print('ok')
 
         # print(event.message.text) # 接收用戶訊息
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0' , debug=True)
