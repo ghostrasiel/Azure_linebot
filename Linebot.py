@@ -1,15 +1,7 @@
 from flask import Flask, request, abort
 from model import selectdb , receipt
-
-from linebot import (
-    LineBotApi, WebhookHandler
-)
-from linebot.exceptions import (
-    InvalidSignatureError
-)
-from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage,
-)
+from linebot import LineBotApi, WebhookHandler
+from linebot.models import MessageEvent, TextMessage, TextSendMessage
 import json
 
 app = Flask(__name__)
