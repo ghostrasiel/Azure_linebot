@@ -69,3 +69,5 @@ def Mongo_db_select(): #查詢最後中獎發票的月份
             server.stop()
             pass
     return start_Date
+
+# print(Mongo_select(11001))
