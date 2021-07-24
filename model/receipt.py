@@ -54,5 +54,3 @@ def receipt_mechine(receipt_num_list,receipt_data):
                 m = '銘謝惠顧'
                 total.append((receipt_num,c,m))
         return total #return(發票號碼,中獎資訊,獲得獎金)
-if __name__ == '__main()__':
-    receipt_mechine(receipt_num_list,receipt_data)
