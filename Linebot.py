@@ -12,8 +12,8 @@ file = os.path.dirname(os.path.realpath(__file__))
 app = Flask(__name__)
 
 # secretFile = json.load(open("secretFile.txt",'r'))
-channelAccessToken = "kjBsbF2p0gYruS/TejEcGgfKn/dL6MgDQSvXP5G0pT09Jm/bLlPbbE3XEovqI5/2MqX4s4A/SAw3/uduRQ7MtzDrsm7Kd+bFi9EIGzCBLmdx+ykt/+R2aqG/a3bAbhO2qp3qfWmuUk8izMMusJcVJAdB04t89/1O/w1cDnyilFU="
-channelSecret = "5734e0bf3fbca2b8ab26972585c039a7"
+channelAccessToken = ""
+channelSecret = ""
 
 line_bot_api = LineBotApi(channelAccessToken)
 handler = WebhookHandler(channelSecret)
