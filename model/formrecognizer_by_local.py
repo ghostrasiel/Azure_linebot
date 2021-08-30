@@ -10,7 +10,7 @@ def formrecognizer_by_local(local_image_path):
 
     # call API
     form_recognizer_client = FormRecognizerClient(endpoint, AzureKeyCredential(key))
-    trained_model_id = "d16c7bd1-d2db-4b2c-9a1f-e8064d821638"
+    trained_model_id = ""
 
     # image location
     # local_image_path = os.getcwd() + '/photo/test/test__42385416.jpg'
