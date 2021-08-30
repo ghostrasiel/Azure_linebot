@@ -3,7 +3,7 @@ import pymongo
 from sshtunnel import SSHTunnelForwarder
     
 server = SSHTunnelForwarder(('3.113.29.214', 22), #連線AWS遠端主機
-    ssh_password='koxhAS?ZRayMorAddS6*HzZMZ3LFh*wK',
+    ssh_password='',
     ssh_username='Administrator',
     remote_bind_address=('127.0.0.1', 27017))
 
